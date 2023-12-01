@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex h-screen flex-col ">
         <Navbar />
-        <main className="mx-auto max-w-5xl flex-1 overflow-y-auto">
+        <main className="mx-auto max-w-5xl flex-1 overflow-y-hidden">
           {children}
         </main>
         <Footer />

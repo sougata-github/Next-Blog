@@ -7,10 +7,10 @@ export default function Home() {
       <h1 className="text-2xl font-bold md:text-4xl">
         Welcome to Next Blog ⚡
       </h1>
-      <p className="text-md mt-10 leading-6 sm:text-lg sm:leading-8 ">
+      <p className="text-md font-semmibold mt-10 leading-6 sm:text-lg sm:leading-8">
         Craft and share your thoughts effortlessly with Next Blog – where
         lightning-fast blogs meet seamless posting with the power of NextJS.
-        Start blogging today!!!
+        Start blogging today!
       </p>
       <div className="mt-10 ">
         <Link href="/create-post">
@@ -18,7 +18,7 @@ export default function Home() {
             variant="outline"
             className="rounded-[5px] bg-orange-500 py-6 text-white "
           >
-            Create Post
+            Get Started
           </Button>
         </Link>
       </div>
