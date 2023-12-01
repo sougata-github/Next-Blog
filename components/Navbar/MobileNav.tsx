@@ -16,7 +16,7 @@ const MobileNav = () => {
       <SheetTrigger asChild>
         <Image
           src="/assets/menu.png"
-          width={26}
+          width={20}
           height={8}
           alt="menu"
           className="inline-block cursor-pointer sm:hidden"
@@ -35,7 +35,7 @@ const MobileNav = () => {
           <div className="mt-4 h-[0.2px] w-full bg-zinc-300" />
         </SheetTitle>
         <nav className="px-2 py-10">
-          <ul className="mt-10 flex flex-col items-start gap-10 text-[18px]">
+          <ul className="flex flex-col items-start gap-6 text-[18px]">
             <Button className="px-0">
               <Image
                 src="/assets/dark-mode.png"

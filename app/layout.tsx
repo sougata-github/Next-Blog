@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer";
+import Footer from "@/components/shared/Footer";
 
 export const metadata: Metadata = {
   title: "Next Blog",
@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex h-screen flex-col ">
         <Navbar />
-        <main className="mx-auto max-w-5xl flex-1 overflow-y-hidden">
+        <main className="hide-scrollbar mx-auto max-w-5xl flex-1 overflow-y-auto">
           {children}
         </main>
         <Footer />
