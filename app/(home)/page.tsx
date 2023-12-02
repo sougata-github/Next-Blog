@@ -14,10 +14,7 @@ export default function Home() {
       </p>
       <div className="mt-10 ">
         <Link href="/create-post">
-          <Button
-            variant="outline"
-            className="rounded-[5px] bg-orange-500 py-6 text-white "
-          >
+          <Button className="rounded-[5px] bg-orange-500 py-6 text-white hover:bg-orange-200 hover:text-white">
             Get Started
           </Button>
         </Link>
