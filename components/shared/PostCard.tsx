@@ -5,9 +5,10 @@ interface Props {
   title: string;
   content: string;
   author: string;
+  createdAt: string;
 }
 
-const PostCard = ({ _id, title, content, author }: Props) => {
+const PostCard = ({ _id, title, content, author, createdAt }: Props) => {
   return (
     <Link href={`/all-posts/${_id}`}>
       <div className="mt-10 max-w-full rounded-[10px] bg-zinc-50 px-8 py-8 shadow-md shadow-zinc-200">
@@ -19,7 +20,7 @@ const PostCard = ({ _id, title, content, author }: Props) => {
         </div>
         <div className="flex">
           <p className="mt-4 text-[10px] text-gray-400">
-            Created by {author} | 1/12/2023
+            Created by {author} | {createdAt}
           </p>
         </div>
       </div>
