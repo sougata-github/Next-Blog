@@ -3,14 +3,6 @@
 import Post from "@/database/post.model";
 import { connectToDatabase } from "../mongoose";
 import { revalidatePath } from "next/cache";
-import { connect } from "http2";
-
-interface createPostParams {
-  author: string;
-  title: string;
-  content: string;
-  path: string;
-}
 
 export async function getAllPosts() {
   try {
@@ -19,6 +11,23 @@ export async function getAllPosts() {
     const posts = await Post.find({}).sort({ createdAt: -1 });
 
     return posts;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+}
+
+export async function getPostById(params: getPostByIdParams) {
+  try {
+    connectToDatabase();
+    const { postId } = params;
+
+    const post = await Post.findById(postId);
+
+    if (!post) {
+      throw new Error(`Post not found`);
+    }
+    return post;
   } catch (error) {
     console.log(error);
     throw error;
