@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-let isConnected = false;
+let isConnected: boolean = false;
 
 export const connectToDatabase = async () => {
   mongoose.set("strictQuery", true);
@@ -16,7 +16,7 @@ export const connectToDatabase = async () => {
 
   try {
     await mongoose.connect(process.env.MONGODB_URL, {
-      dbName: "Next Blog",
+      dbName: "NextBlog",
     });
     isConnected = true;
     console.log("MongoDB is connected.");

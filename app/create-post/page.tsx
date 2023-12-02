@@ -14,6 +14,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { createPost } from "@/lib/actions/post.action";
 
 const formSchema = z.object({
   name: z.string().min(2).max(50),
@@ -21,18 +24,38 @@ const formSchema = z.object({
   content: z.string().min(10),
 });
 
-function onSubmit(values: z.infer<typeof formSchema>) {
-  console.log(values);
-}
-
 const Page = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const pathname = usePathname();
+  const router = useRouter();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       title: "",
+      content: "",
     },
   });
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      await createPost({
+        author: values.name,
+        title: values.title,
+        content: values.content,
+        path: pathname,
+      });
+      form.reset();
+      router.push("/all-posts");
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   return (
     <section className="flex max-w-full flex-col px-10 py-10 sm:px-6 ">
@@ -99,8 +122,11 @@ const Page = () => {
               </FormItem>
             )}
           />
-          <Button className="w-fit rounded-[5px] bg-orange-500  py-2 text-white hover:bg-orange-200 hover:text-white">
-            Submit
+          <Button
+            disabled={isSubmitting}
+            className="w-fit rounded-[5px] bg-orange-500  py-2 text-white hover:bg-orange-200 hover:text-white"
+          >
+            {isSubmitting ? "Submitting" : "Submit"}
           </Button>
         </form>
       </Form>
