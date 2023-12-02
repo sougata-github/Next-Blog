@@ -17,7 +17,7 @@ const MobileNav = () => {
       <SheetTrigger asChild>
         <Image
           src="/assets/menu.png"
-          width={30}
+          width={20}
           height={8}
           alt="menu"
           className="inline-block cursor-pointer sm:hidden"

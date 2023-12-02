@@ -20,7 +20,7 @@ import { createPost } from "@/lib/actions/post.action";
 
 const formSchema = z.object({
   name: z.string().min(2).max(50),
-  title: z.string().min(5).max(60),
+  title: z.string().min(2).max(60),
   content: z.string().min(10),
 });
 
@@ -69,7 +69,7 @@ const Page = () => {
             control={form.control}
             name="name"
             render={({ field }) => (
-              <FormItem className="">
+              <FormItem>
                 <FormLabel className="text-md dark:text-light-100 text-gray-600">
                   Author<span>*</span>
                 </FormLabel>
@@ -78,6 +78,7 @@ const Page = () => {
                     className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-200 py-4 text-left placeholder:text-gray-500 sm:py-6"
                     {...field}
                     placeholder="Enter you name"
+                    required
                   />
                 </FormControl>
               </FormItem>
@@ -97,6 +98,7 @@ const Page = () => {
                     className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-200 py-4 text-left placeholder:text-gray-500 sm:py-6"
                     {...field}
                     placeholder="Title of your story"
+                    required
                   />
                 </FormControl>
               </FormItem>
@@ -117,6 +119,7 @@ const Page = () => {
                     {...field}
                     cols={80}
                     rows={4}
+                    required
                   />
                 </FormControl>
               </FormItem>
