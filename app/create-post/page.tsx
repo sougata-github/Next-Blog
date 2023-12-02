@@ -70,12 +70,12 @@ const Page = () => {
             name="name"
             render={({ field }) => (
               <FormItem className="">
-                <FormLabel className="text-md text-gray-600 ">
+                <FormLabel className="text-md dark:text-light-100 text-gray-600">
                   Author<span>*</span>
                 </FormLabel>
                 <FormControl className="mt-5">
                   <Input
-                    className="flex rounded-[5px] border-none bg-zinc-200 py-4 text-left placeholder:text-gray-500 sm:py-6"
+                    className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-200 py-4 text-left placeholder:text-gray-500 sm:py-6"
                     {...field}
                     placeholder="Enter you name"
                   />
@@ -89,12 +89,12 @@ const Page = () => {
             name="title"
             render={({ field }) => (
               <FormItem className="">
-                <FormLabel className="text-md text-gray-600 ">
+                <FormLabel className="text-md dark:text-light-100 text-gray-600">
                   Title<span>*</span>
                 </FormLabel>
                 <FormControl className="mt-5">
                   <Input
-                    className="flex rounded-[5px] border-none bg-zinc-200 py-4 text-left placeholder:text-gray-500 sm:py-6"
+                    className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-200 py-4 text-left placeholder:text-gray-500 sm:py-6"
                     {...field}
                     placeholder="Title of your story"
                   />
@@ -108,12 +108,12 @@ const Page = () => {
             name="content"
             render={({ field }) => (
               <FormItem className="">
-                <FormLabel className="text-md text-gray-600">
+                <FormLabel className="text-md dark:text-light-100 text-gray-600">
                   Write your Blog<span>*</span>
                 </FormLabel>
                 <FormControl className="mt-5">
                   <Textarea
-                    className="flex rounded-[5px] border-none bg-zinc-200 py-4 text-left placeholder:text-gray-500 sm:py-6"
+                    className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-200 py-4 text-left placeholder:text-gray-500 sm:py-6"
                     {...field}
                     cols={80}
                     rows={4}
@@ -124,7 +124,7 @@ const Page = () => {
           />
           <Button
             disabled={isSubmitting}
-            className="w-fit rounded-[5px] bg-orange-500  py-2 text-white hover:bg-orange-200 hover:text-white"
+            className="primary-gradient w-fit rounded-[5px] py-2 text-white "
           >
             {isSubmitting ? "Submitting" : "Submit"}
           </Button>

@@ -5,7 +5,7 @@ const Page = async ({ params }: any) => {
   const post = await getPostById({ postId: params.id });
 
   return (
-    <section className="max-w-full flex-col p-10 text-left md:max-w-[770px] lg:px-6">
+    <section className="dark:text-light-100 max-w-full flex-col p-10 text-left md:max-w-[770px] lg:px-6">
       <div className="flex flex-col items-start gap-6">
         <h1 className="text-3xl font-bold capitalize md:text-4xl">
           {post.title}

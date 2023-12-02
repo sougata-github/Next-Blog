@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Theme from "./Theme";
 
 const MobileNav = () => {
   return (
@@ -16,7 +17,7 @@ const MobileNav = () => {
       <SheetTrigger asChild>
         <Image
           src="/assets/menu.png"
-          width={20}
+          width={30}
           height={8}
           alt="menu"
           className="inline-block cursor-pointer sm:hidden"
@@ -24,7 +25,7 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent
         side="left"
-        className="hide-scrollbar overflow-hidden bg-white"
+        className="hide-scrollbar overflow-hidden border-none bg-zinc-100 dark:bg-black"
       >
         <SheetTitle className="flex w-full flex-col justify-start px-2">
           <Link href="/">
@@ -36,19 +37,12 @@ const MobileNav = () => {
         </SheetTitle>
         <nav className="px-2 py-10">
           <ul className="flex flex-col items-start gap-6 text-[18px]">
-            <Button className="px-0">
-              <Image
-                src="/assets/dark-mode.png"
-                width={20}
-                height={20}
-                alt="light-mode icon"
-              />
-            </Button>
+            <Theme />
             <Link href="/all-posts" className="text-gray-500 hover:font-bold">
               Posts
             </Link>
             <Link href="/create-post" className="text-gray-500 hover:font-bold">
-              <Button className="rounded-[5px] bg-orange-500 py-6  text-white hover:bg-orange-200 hover:text-white">
+              <Button className="primary-gradient rounded-[5px] text-white ">
                 Create Post
               </Button>
             </Link>
