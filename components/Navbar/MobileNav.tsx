@@ -17,10 +17,10 @@ const MobileNav = () => {
       <SheetTrigger asChild>
         <Image
           src="/assets/menu.png"
-          width={20}
+          width={26}
           height={8}
           alt="menu"
-          className="inline-block cursor-pointer sm:hidden"
+          className="inline-block h-6 cursor-pointer sm:hidden"
         />
       </SheetTrigger>
       <SheetContent

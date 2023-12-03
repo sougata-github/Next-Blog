@@ -75,7 +75,7 @@ const Page = () => {
                 </FormLabel>
                 <FormControl className="mt-5">
                   <Input
-                    className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-200 py-4 text-left placeholder:text-gray-500 sm:py-6"
+                    className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-50 py-4 text-left placeholder:text-gray-500 sm:py-6"
                     {...field}
                     placeholder="Enter you name"
                     required
@@ -95,7 +95,7 @@ const Page = () => {
                 </FormLabel>
                 <FormControl className="mt-5">
                   <Input
-                    className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-200 py-4 text-left placeholder:text-gray-500 sm:py-6"
+                    className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-50 py-4 text-left placeholder:text-gray-500 sm:py-6"
                     {...field}
                     placeholder="Title of your story"
                     required
@@ -115,7 +115,7 @@ const Page = () => {
                 </FormLabel>
                 <FormControl className="mt-5">
                   <Textarea
-                    className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-200 py-4 text-left placeholder:text-gray-500 sm:py-6"
+                    className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-50 py-4 text-left placeholder:text-gray-500 sm:py-6"
                     {...field}
                     cols={80}
                     rows={4}

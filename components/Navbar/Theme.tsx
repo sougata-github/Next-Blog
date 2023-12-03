@@ -13,7 +13,7 @@ const Theme = () => {
         {mode === "light" ? (
           <Image
             src="/assets/dark-mode.png"
-            width={28}
+            width={22}
             height={20}
             alt="light-mode icon"
             onClick={() => {
@@ -24,7 +24,7 @@ const Theme = () => {
         ) : (
           <Image
             src="/assets/light-mode.png"
-            width={32}
+            width={22}
             height={20}
             alt="light-mode icon"
             onClick={() => {

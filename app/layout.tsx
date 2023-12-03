@@ -17,9 +17,9 @@ export default function RootLayout({
   return (
     <ThemeProvider>
       <html lang="en">
-        <body className="flex h-screen flex-col dark:bg-black dark:text-white">
+        <body className="max-w flex h-screen flex-col dark:bg-black dark:text-white">
           <Navbar />
-          <main className="hide-scrollbar mx-auto max-w-5xl flex-1 overflow-y-auto ">
+          <main className="hide-scrollbar max-w mx-auto max-w-5xl flex-1 overflow-y-auto">
             {children}
           </main>
           <Footer />
