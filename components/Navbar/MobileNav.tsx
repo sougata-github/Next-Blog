@@ -38,7 +38,9 @@ const MobileNav = () => {
               Posts
             </Link>
             <Link href="/create-post" className="text-gray-500 hover:font-bold">
-              <Button className="rounded-[5px] text-white ">Create Post</Button>
+              <Button className="primary-gradient rounded-[5px] text-white ">
+                Create Post
+              </Button>
             </Link>
           </ul>
         </nav>
