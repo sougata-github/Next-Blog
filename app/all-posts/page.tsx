@@ -3,6 +3,8 @@ import PostCard from "@/components/PostCard";
 import { getAllPosts } from "@/lib/actions/post.action";
 import { formatDate } from "@/lib/utils";
 
+export const dynamic = "force-dynamic";
+
 const Page = async () => {
   const posts = await getAllPosts();
 

@@ -73,7 +73,7 @@ const Page = () => {
               </FormLabel>
               <FormControl className="mt-5">
                 <Input
-                  className="flex rounded-[5px] border-none bg-zinc-50 py-4 text-left sm:py-6"
+                  className="flex rounded-[5px] border-none bg-zinc-50 py-4 text-left placeholder:text-gray-500 sm:py-6"
                   {...field}
                   placeholder="Enter you name"
                   required
