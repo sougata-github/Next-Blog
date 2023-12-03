@@ -48,7 +48,6 @@ const Page = () => {
         content: values.content,
         path: pathname,
       });
-      form.reset();
       router.push("/all-posts");
     } catch (error) {
       console.log(error);
