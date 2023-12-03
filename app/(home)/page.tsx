@@ -7,7 +7,7 @@ export default function Home() {
       <h1 className="text-2xl font-bold md:text-4xl">
         Welcome to Next Blog ⚡
       </h1>
-      <p className="text-md font-semmibold xl: dark:text-light-100 mt-10 max-w-[400px] leading-6 sm:text-lg sm:leading-8 md:max-w-[600px]">
+      <p className="text-md font-semmibold mt-10 max-w-[400px] leading-6 sm:text-lg sm:leading-8 md:max-w-[600px]">
         Craft and share your thoughts effortlessly with Next Blog – where
         lightning-fast blogs meet seamless posting with the power of NextJS.
         Start blogging today!

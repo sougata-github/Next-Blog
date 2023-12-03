@@ -68,12 +68,12 @@ const Page = () => {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-md dark:text-light-100 text-gray-600">
+              <FormLabel className="text-md text-gray-600">
                 Author<span>*</span>
               </FormLabel>
               <FormControl className="mt-5">
                 <Input
-                  className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-50 py-4 text-left placeholder:text-gray-500 sm:py-6"
+                  className="flex rounded-[5px] border-none bg-zinc-50 py-4 text-left sm:py-6"
                   {...field}
                   placeholder="Enter you name"
                   required
@@ -89,12 +89,12 @@ const Page = () => {
           name="title"
           render={({ field }) => (
             <FormItem className="">
-              <FormLabel className="text-md dark:text-light-100 text-gray-600">
+              <FormLabel className="text-md  text-gray-600">
                 Title<span>*</span>
               </FormLabel>
               <FormControl className="mt-5">
                 <Input
-                  className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-50 py-4 text-left placeholder:text-gray-500 sm:py-6"
+                  className="flex rounded-[5px] border-none bg-zinc-50 py-4 text-left placeholder:text-gray-500 sm:py-6"
                   {...field}
                   placeholder="Title of your story"
                   required
@@ -110,12 +110,12 @@ const Page = () => {
           name="content"
           render={({ field }) => (
             <FormItem className="">
-              <FormLabel className="text-md dark:text-light-100 text-gray-600">
+              <FormLabel className="text-md text-gray-600">
                 Write your Blog<span>*</span>
               </FormLabel>
               <FormControl className="mt-5">
                 <Textarea
-                  className="dark:dark-gradient-input flex rounded-[5px] border-none bg-zinc-50 py-4 text-left placeholder:text-gray-500 sm:py-6"
+                  className="flex rounded-[5px] border-none bg-zinc-50 py-[12px] text-left placeholder:text-gray-500 sm:py-4"
                   {...field}
                   cols={80}
                   rows={4}

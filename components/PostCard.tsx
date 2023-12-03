@@ -11,7 +11,7 @@ interface Props {
 const PostCard = ({ _id, title, content, author, createdAt }: Props) => {
   return (
     <Link href={`/all-posts/${_id}`}>
-      <div className="dark:dark-gradient mt-10 max-w-full rounded-[10px] bg-zinc-50 px-8 py-8 shadow-zinc-200 dark:shadow-none">
+      <div className="mt-10 max-w-full rounded-[10px] bg-zinc-50 px-8 py-8 shadow-zinc-200">
         <h1 className="text-left text-lg font-semibold text-zinc-400 md:text-xl">
           {title}
         </h1>

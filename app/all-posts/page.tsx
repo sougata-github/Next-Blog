@@ -1,5 +1,5 @@
 import NoResult from "@/components/NoResult";
-import PostCard from "../../components/PostCard";
+import PostCard from "@/components/PostCard";
 import { getAllPosts } from "@/lib/actions/post.action";
 import { formatDate } from "@/lib/utils";
 
