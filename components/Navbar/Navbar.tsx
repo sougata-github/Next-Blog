@@ -3,7 +3,7 @@ import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 flex justify-between bg-zinc-100 px-8 py-5 md:px-20">
+    <nav className="flex justify-between bg-zinc-100 px-8 py-5 md:px-20">
       <Link href="/" className="flex-center">
         <p className="text-center text-[20px] font-semibold text-gray-500">
           NEXT <span className="font-extrabold text-orange-400">BLOG</span>
